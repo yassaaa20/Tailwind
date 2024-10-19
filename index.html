@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-bg video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .footer {
+            background-color: #4BB3FD;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-column {
+            width: 20%;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer .logo {
+            font-size: 28px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .logo span {
+            font-size: 14px;
+            margin-left: 10px;
+            color: #666;
+        }
+  </style>
+</head>
+<section id="Home">
+<body class="bg-gray-900">
+  <!-- Home page and Navbar -->
+  <div class="Home">
+  <header class="hero-bg">
+    <video autoplay muted loop>
+      <source src="asset/Genshin Impact - Nilou [ Live Wallpaper ] - Live Wallpaper Centre (1080p60, h264, youtube).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <!-- Navbar -->
+    <nav class="absolute top-0 left-0 w-full z-20">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-white font-bold text-2xl">YASAA</h1>
+        <ul class="flex space-x-8 text-white">
+          <li><a href="#Home" class="hover:text-gray-300">HOME</a></li>
+          <li><a href="#about" class="hover:text-gray-300">ABOUT</a></li>
+          <li><a href="#ascension-materials" class="hover:text-gray-300">MATERIALS</a></li>
+          <li><a href="#Skills" class="hover:text-gray-300">DEMO</a></li>
+          <li><a href="#contact" class="hover:text-gray-300">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h2 class="text-4xl md:text-6xl font-bold">NILOU</h2>
+      <p class="mt-4 text-lg md:text-xl">
+        A dancer under the Zubayr Theater,
+      </p>
+      <p class="mt-2 text-lg md:text-xl">
+        Nilou's dancing is but elegant and graceful.
+      </p>
+      <button id="moreInfoBtn"><a href="#about" class="mt-8 inline-block bg-black text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300">
+        MORE INFO
+      </a></button>
+    </div>
+  </header>
+  </div>
+</section>
+    <!-- About Section -->
+<section id="about" class="py-20 bg-white text-gray-800">
+  <div class="container mx-auto px-6 lg:px-20">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold">New Character</h2>
+      <p class="mt-4 text-lg">
+        Nilou is a beautiful dancer from Sumeru.
+      </p>
+    </div>
+    <div class="flex flex-wrap items-center">
+      <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+        <div class="sketchfab-embed-wrapper">
+          <iframe title="nilou" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/885f890fa4f24ca5af9eedb0a48fd005/embed?autospin=1&autostart=1" width="100%" height="480"> 
+          </iframe>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2 lg:pl-16">
+        <p class="text-xl mb-6">
+          Nilou is a talented dancer from the region of Sumeru in Genshin Impact. Known for her graceful and mesmerizing movements, Nilou brings peace and joy to those around her. Her outfit, a stunning blend of blue and gold, reflects her connection to the Hydro element, with each dance resembling the harmonious flow of water.
+        </p>
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="p-3 bg-teal-600 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2.25C12 2.25 8.25 7.2 8.25 10.5A3.75 3.75 0 0012 14.25c2.07 0 3.75-1.68 3.75-3.75 0-3.3-3.75-8.25-3.75-8.25zM12 22.25c-3.45 0-6.25-2.8-6.25-6.25h12.5c0 3.45-2.8 6.25-6.25 6.25z"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold">Element</h3>
+              <p class="text-gray-600">
+                As a Hydro element character, Nilou excels in wide-area attacks through rhythmic dance and water explosions. Her abilities allow players to create a sequence of attacks that deal significant damage while providing essential support to the team.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="p-3 bg-blue-700 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7c1.35 1.36 2.25 2.25 4 2.25C10 9.25 12 5 15 5c3 0 4.5 6 9 6-1.35-1.35-2.25-2.25-4-2.25C15 8.75 13 13 10 13c-3 0-4.5-6-9-6zm0 10c1.35 1.36 2.25 2.25 4 2.25 3 0 5-4.25 8-4.25 3 0 4.5 6 9 6-1.35-1.35-2.25-2.25-4-2.25-3 0-5 4.25-8 4.25-3 0-4.5-6-9-6z"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold">Character Appearance</h3>
+              <p class="text-gray-600">
+                Nilou has long, striking red hair and deep blue eyes that enhance her mysterious and captivating aura.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="p-3 bg-indigo-500 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6c4.418 0 8 2.686 8 6s-3.582 6-8 6-8-2.686-8-6 3.582-6 8-6z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14.5c-1.933 0-3.5-.895-3.5-2s1.567-2 3.5-2 3.5.895 3.5 2-1.567 2-3.5 2z"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold">Get to Know Nilou</h3>
+              <p class="text-gray-600">
+                Explore the world of Sumeru with Nilou, a character who not only masters the art of dance but also wields the power of the water element.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Material Section-->
+<section id="ascension-materials" class="py-12 bg-blue-50">
+  <video autoplay muted loop id="bg-video" class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="asset/background-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+  <div class="container mx-auto px-6 lg:px-20 text-center">
+    <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300 mb-10">Material Ascension</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3316838/c038c045f0dfb7c9291e4c95268d9d9b.png/show" alt="Varunada Lazurite Sliver" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">1</p>
+        <p class="text-sm text-gray-600">Varunada Lazurite Sliver</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3316844/910ab3e7cdf9faa7403bf943a376c4a0.png/show" alt="Varunada Lazurite Fragment" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">9</p>
+        <p class="text-sm text-gray-600">Varunada Lazurite Fragment</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3316848/3eb33bc3f5cee6143f42860ed39479af.png/show" alt="Varunada Lazurite Chunk" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">9</p>
+        <p class="text-sm text-gray-600">Varunada Lazurite Chunk</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3316845/92d2a5cde62a34ec37fcebd431315bf2.png/show" alt="Varunada Lazurite Gemstone" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">6</p>
+        <p class="text-sm text-gray-600">Varunada Lazurite Gemstone</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3587878/1886f25e7c6c1da07afa0b5a87d490e8.png/show" alt="Perpetual Caliber" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">46</p>
+        <p class="text-sm text-gray-600">Perpetual Caliber</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3567323/eee143890c5dada9e932c9c1725bdb43.png/show" alt="Padisarah" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">168</p>
+        <p class="text-sm text-gray-600">Padisarah</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3512349/6c3b4bbd359bded40bfd961a21bf579e.png/show" alt="Fungal Spores" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">18</p>
+        <p class="text-sm text-gray-600">Fungal Spores</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3512347/9cc878fbeea7a73c59e647f4c4a70bea.png/show" alt="Luminescent Pollen" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">30</p>
+        <p class="text-sm text-gray-600">Luminescent Pollen</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <img src="https://img.game8.co/3512348/6ba7a854947e8a4004229112b0faabd7.png/show" alt="Crystalline Cyst Dust" class="mx-auto w-24 h-24 rounded-lg">
+        <p class="mt-4 text-lg font-bold text-teal-600">36</p>
+        <p class="text-sm text-gray-600">Crystalline Cyst Dust</p>
+      </div>
+    </div>
+    <div class="bg-teal-100 py-6 px-8 rounded-lg mb-12 border border-teal-300 shadow-md">
+      <p class="text-gray-800 text-lg">After successfully Ascend, Nilou gets additional <span class="font-bold text-teal-700">HP%</span>.</p>
+    </div>
+    <h2 class="text-4xl font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-400">Talent</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3914163/69ec34dd1eda49e63b323d687baebeaa.png/show" alt="Teachings of Praxis" class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">9</p>
+        <p class="text-sm text-gray-600">Teachings of Praxis</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3914141/0c38a683ea296d2f7e44bca2dfe6fb43.png/show" alt="Guide to Praxis" class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">63</p>
+        <p class="text-sm text-gray-600">Guide to Praxis</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3914154/d20695c9524c2bf77e72ef80a6741b42.png/show" alt="Philosophies of Praxis" class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">114</p>
+        <p class="text-sm text-gray-600">Philosophies of Praxis</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3512349/6c3b4bbd359bded40bfd961a21bf579e.png/show" alt="Fungal Spores" class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">18</p>
+        <p class="text-sm text-gray-600">Fungal Spores</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3512347/9cc878fbeea7a73c59e647f4c4a70bea.png/show" alt="Luminescent Pollen" class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">66</p>
+        <p class="text-sm text-gray-600">Luminescent Pollen</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3512348/6ba7a854947e8a4004229112b0faabd7.png/show" alt="Crystalline Cyst Dust" class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">93</p>
+        <p class="text-sm text-gray-600">Crystalline Cyst Dust</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <img src="https://img.game8.co/3487594/f63a5957716b2197b550620295922033.png/show" alt="Tears of the Calamitous God " class="mx-auto w-24 h-24 object-cover rounded-lg shadow-lg">
+        <p class="mt-4 text-xl font-semibold text-pink-600">18</p>
+        <p class="text-sm text-gray-600">Tears of the Calamitous God </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SKill Section -->
+  <section id="Skills" class="py-12 relative">
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video" class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="asset/underwater bubbles background Footage.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Content Section -->
+    <div class="container mx-auto px-6 lg:px-20 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white">Demo Character</h2>
+      </div>
+      <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+        <div id="carousel" class="flex transition-transform duration-500">
+          <!-- Slide 1 -->
+          <div class="min-w-full flex items-center justify-center">
+            <div class="relative p-4 border-4 rounded-lg shadow-lg bg-white">
+              <video class="w-full h-auto" controls>
+                <source src="asset/Character Demo -  Nilou_ Dance of the Delicate Lotus.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<style>
+  /* Styling for the background video */
+  #bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Optional: to enhance readability of text over video */
+  #skills {
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+  
+  <!-- Footer Section -->
+   <section id="contact">
+    <footer class="footer">
+      <div class="footer-column logo">
+          <span>#</span>
+          <p>MUHAMMAD ILYASA<br>TUGAS TAILWIND</p>
+      </div>
+      <div class="footer-column">
+          <h3>SERVICES</h3>
+          <a href="#">Branding</a><br>
+          <a href="#">Design</a><br>
+          <a href="#">Marketing</a><br>
+          <a href="#">Advertisement</a>
+      </div>
+      <div class="footer-column">
+          <h3>COMPANY</h3>
+          <a href="#">About us</a><br>
+          <a href="#">Contact</a><br>
+          <a href="#">Jobs</a><br>
+          <a href="#">Press kit</a>
+      </div>
+      <div class="footer-column">
+          <h3>LEGAL</h3>
+          <a href="#">Terms of use</a><br>
+          <a href="#">Privacy policy</a><br>
+          <a href="#">Cookie policy</a>
+      </div>
+  </footer>
+   </section>
+<script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: targetSection.offsetTop - 64, // Adjust offset for fixed navbar
+        behavior: 'smooth'
+      });
+    });
+  });
+  document.querySelector('button').addEventListener('mouseover', function () {
+      this.style.animation = 'pulse 1s infinite';
+    });
+
+    document.querySelector('button').addEventListener('mouseout', function () {
+      this.style.animation = '';
+    });
+    const moreInfoBtn = document.getElementById('moreInfoBtn');
+    const aboutSection = document.getElementById('about');
+
+    moreInfoBtn.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
